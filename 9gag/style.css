@@ -1,0 +1,48 @@
+#top-nav{
+    background-color: black;
+    width: 100%;
+    z-index: 13;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#amblem{
+    margin-left: 50px;
+}
+#amblem:hover{
+    opacity: .8;
+}
+ul li{
+    display: inline;
+}
+nav{
+    padding: 10px 0; 
+    
+}
+nav a{
+    text-decoration: none;
+    color:white;
+    margin-left: 17px;
+}
+nav a #zar{
+    margin-right: 2px;
+}
+nav #nav-left{
+    display: inline;
+}
+nav #nav-right{
+    display: inline;
+    position: absolute;
+    right: 25px;
+    bottom: 9px;
+}
+header #nav-right #upload{
+    margin-left: 17px;
+}
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+header nav #nav-right button #plus{
+    margin-right: 13px;
+}

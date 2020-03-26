@@ -1,0 +1,354 @@
+.top-nav{
+    background-color: black;
+    width: 100%;
+    z-index: 13;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#amblem{
+    margin-left: 50px;
+}
+#amblem:hover{
+    opacity: .8;
+}
+
+.nav-menu{
+    padding: 10px 0; 
+    
+}
+.nav-menu a{
+    text-decoration: none;
+    color:white;
+    margin-left: 17px;
+}
+.nav-menu a #zar{
+    margin-right: 2px;
+}
+.nav-menu #nav-left{
+    display: inline;
+}
+.nav-menu #nav-right{
+    display: inline;
+    position: absolute;
+    right: 25px;
+    bottom: 9px;
+}
+.top-nav #nav-right #upload{
+    margin-left: 17px;
+}
+a{
+    color: #09f;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+.top-nav .nav-menu #nav-right button #plus{
+    margin-right: 13px;
+}
+
+.fa-sign-in-alt{
+    margin-right: 4px;
+}
+
+.fa-id-card-alt{
+    position: absolute;
+    left: 5px;
+    font-size: 1.5em;
+}
+
+#KullanıcıAdı{
+    position: relative;
+    left: 25px;
+}
+
+.modal-body{
+    overflow: auto;
+}
+
+.fa-lock{
+    position: absolute;
+    left: 10px;
+    font-size: 1.5em;
+} 
+
+#Şifre {
+    position: relative;
+    left: 25px;
+}
+
+.Sifre-form{
+    margin-top: 10px;
+}
+
+.fa-envelope{
+    position: absolute;
+    left: 10px;
+    font-size: 1.5em;
+}
+
+#eMail{
+    position: relative;
+    left: 25px;
+}
+
+.eMail-form{
+    margin-top: 10px;
+}
+
+.fa-user-plus{
+    margin-right: 3px;
+}
+
+#header-sign-in{
+    font-weight: bold;
+}
+
+#header-sign-up{
+    font-weight: bold;
+}
+#container{
+    width: 1196px;
+    padding: 48px 16px 32px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    clear: both;
+}
+
+.section-sidebar{
+    width: 192px;
+    height: calc(100% - 48px);
+    position: fixed;
+    z-index: 1;
+    overflow: hidden;
+    overscroll-behavior: contain;
+}
+#top-nav, .badge-sticky-button, .section-sidebar .stealthy-scroll-container, a.back-to-top {
+    will-change: transform;
+}
+.section-sidebar .stealthy-scroll-container {
+    padding-top: 24px;
+}
+.stealthy-scroll-container {
+    padding-right: 20px;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    padding-top: 24px;
+}
+
+section {
+    display: block;
+}
+.section-sidebar section {
+    padding: 0 0 12px;
+}
+
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.section-sidebar section .nav {
+    list-style: none;
+}
+.section-sidebar section .nav li {
+    position: relative;
+}
+.section-sidebar .nav .label {
+    color: #000;
+    font-size: 14px;
+    height: 36px;
+    line-height: 20px;
+    padding: 8px 0 8px 36px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    border-radius: 2px;
+    transition: background-color .15s,padding-right .15s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 8px;
+}
+
+
+ul{
+    display: block;
+}
+.section-sidebar .nav li .label:hover {
+    background-color: rgba(0,0,0,.03);
+    padding-right: 32px;
+}
+.section-sidebar section {
+    padding: 0 0 12px;
+}
+.section-sidebar header h3 {
+    line-height: 16px;
+    height: 16px;
+    margin-bottom: 8px;
+    color: #999;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.section-sidebar .nav .thumbnail {
+    background-color: rgba(0,0,0,.05);
+    background-image: none;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.main-wrap{
+    width: 640px;
+    float: left;
+}
+.featured-tag{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+div{
+    display: block;
+}
+.featured-tag a{
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    background-color: rgba(0,0,0,.06);
+    color: black;
+    text-decoration: none;
+    padding: 0 8px;
+    border-radius: 2px ;
+    text-align: center;
+}
+.page{
+    width: 972px;
+    padding-top: 24px;
+    margin: 0 0 32px 224px;
+}
+#list-view-2{
+    width: 972px;
+    padding-top: 24px;
+    margin: 0 0 32px 224px;
+}
+section#list-view-2 .list-stream {
+    margin-bottom: 24px;
+}
+article{
+    display: block;
+}
+section#list-view-2 header {
+    margin-bottom: 8px;
+    position: relative;
+}
+header{
+    display: block;
+}
+section#list-view-2 .post-section {
+    height: 20px;
+    color: #999;
+    font-size: 12px;
+
+}
+section#list-view-2 .post-section #funny img {
+    display: block;
+    width: 100%;
+}
+section#list-view-2 .post-section #funny {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    background-color: #f4f4f4;
+    margin-right: 4px;
+    overflow: hidden;
+}
+section#list-view-2 .post-section .message {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 20px;
+}
+
+section#list-view-2 .post-section .message a {
+    color: #999;
+}
+
+section#list-view-2 h1 {
+    word-wrap: break-word;
+    font-size: 20px;
+    color: #000;
+}
+
+a, blockquote, body, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, html, img, input, label, li, ol, p, pre, td, th, ul {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+section#list-view-2 .post-container {
+    width: 500px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+section#list-view-2 .post-container a {
+    display: block;
+}
+
+section#list-view-2 .post-container a img {
+    display: block;
+    width: 500px;
+    border: 0;
+}
+
+section#list-view-2 .post-text-container {
+    margin: 8px 0 0;
+}
+
+.post-text-container {
+    font-size: 16px;
+    margin: 16px 0;
+    line-height: 24px;
+}
+
+section#list-view-2 p.post-meta {
+    color: #999;
+    margin: 0 0 12px;
+}
+
+section#list-view-2 p.post-meta a {
+    color: #999;
+}
+
+.Gönderinin-alt-kısmı{
+    width: 500px;
+}
+
+.Gönderinin-Altındaki-Butonlar{
+    float: left;
+}
+.Gönderinin-Altındaki-Butonlar li{
+    margin: 0 10px 0 0;
+    list-style: none;     
+    display: inline-block;
+}
+.Gönderinin-Altındaki-Butonlar a{
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    width: 44px;
+    height: 34px;
+    display: block;
+    position: relative;
+}
+.Gönderinin-Altındaki-Butonlar a img{
+    position: relative;
+    top: 2px;
+    left: 8px;
+}

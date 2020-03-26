@@ -118,7 +118,7 @@ a:hover{
     clear: both;
 }
 
-.section-left{
+.section-sidebar{
     width: 192px;
     height: calc(100% - 48px);
     position: fixed;
@@ -126,22 +126,81 @@ a:hover{
     overflow: hidden;
     overscroll-behavior: contain;
 }
-
-.section-left,.scroll-container{
+#top-nav, .badge-sticky-button, .section-sidebar .stealthy-scroll-container, a.back-to-top {
+    will-change: transform;
+}
+.section-sidebar .stealthy-scroll-container {
     padding-top: 24px;
 }
-
-.scroll-container{
+.stealthy-scroll-container {
     padding-right: 20px;
     width: 100%;
     height: 100%;
-    overflow-y: scroll;
-} 
+    overflow-y: hidden;
+    padding-top: 24px;
+}
+
+section {
+    display: block;
+}
+.section-sidebar section {
+    padding: 0 0 12px;
+}
+
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.section-sidebar section .nav {
+    list-style: none;
+}
+.section-sidebar section .nav li {
+    position: relative;
+}
+.section-sidebar .nav .label {
+    color: #000;
+    font-size: 14px;
+    height: 36px;
+    line-height: 20px;
+    padding: 8px 0 8px 36px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    border-radius: 2px;
+    transition: background-color .15s,padding-right .15s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 8px;
+}
 
 
 ul{
     display: block;
 }
+.section-sidebar .nav li .label:hover {
+    background-color: rgba(0,0,0,.03);
+    padding-right: 32px;
+}
+.section-sidebar section {
+    padding: 0 0 12px;
+}
+.section-sidebar header h3 {
+    line-height: 16px;
+    height: 16px;
+    margin-bottom: 8px;
+    color: #999;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.section-sidebar .nav .thumbnail {
+    background-color: rgba(0,0,0,.05);
+    background-image: none;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
 .main-wrap{
     width: 640px;
     float: left;
@@ -293,4 +352,3 @@ section#list-view-2 p.post-meta a {
     top: 2px;
     left: 8px;
 }
-

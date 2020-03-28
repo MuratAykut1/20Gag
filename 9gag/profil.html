@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="profil.css">
+    <script src="script.js"></script>
     
 </head>
 
@@ -13,7 +14,7 @@
     <header id="top-nav">
         <nav class="nav-menu">
             <div id="nav-left">
-                <img src="img/9gag.png" id="amblem">
+                <a href="homapage.html"><img src="img/9gag.png" id="amblem"></a>
                 <a href="#"><img src="img/dice.png" id="zar">Random</a>
                 <a href="#">Get APP</a>
                 <a href="#">Shop</a>
@@ -24,11 +25,19 @@
                 <a href="#"><img src="img/moon.png" alt=""></a>
                 <a href="#"><img src="img/search.png" alt=""></a>
                 <a href="#"><img src="img/bell.png" alt=""></a>
-                <a href="#"><img src="img/account.png" alt=""></a>
+                <a href="javascript:dropdownMenu()" class="dropbtn"><img src="img/account.png" alt=""></a>
                 <a href="#" class="btn btn-primary"alt=""><img  src="img/add.png" id="add" height="15" width="17">
                     Upload</a>
+                <div id=#dropdown-menu class="popup-menu user">
+                    <ul>
+                        <li><a href="profil.html">Profilim</a></li>
+                        <li><a href="#">Ayarlar</a></li>
+                        <li><a href="index.html">Çıkış</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
+
     </header>
     <div>
         <div id=container style="padding-top: 48px;">
@@ -165,7 +174,7 @@
 
                     <section id="list-view-2"></section>
                 </div>
-                <section id="sidebar" style="height: 3114px;"></section>
+                <section id="sidebar" ></section>
 
             </div>
     

@@ -1,3 +1,4 @@
+  
 function dropdownMenu() {
     document.getElementById("#dropdown-menu").classList.toggle("show");
   }
@@ -14,3 +15,7 @@ function dropdownMenu() {
       }
     }
   }
+  function darkMode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+ }

@@ -12,6 +12,9 @@
 #amblem:hover{
     opacity: .8;
 }
+.nav li{
+    width: 100%;
+}
 ul li{
     display: inline;
 }
@@ -47,7 +50,7 @@ header nav #nav-right button #plus{
 
 #add
 {
-padding-right: 15px;
+    padding-right: 15px;
 }
 .popup-menu {
     display: none;
@@ -57,7 +60,7 @@ padding-right: 15px;
     z-index: 13;
     min-width: 160px;
 }
-.popup-menu.user {
+.user {
     margin-left: auto;
     left: auto;
     right: 10px;
@@ -88,7 +91,9 @@ padding-right: 15px;
     padding: 0 16px;
     font-size: 14px;
 }
-.show {display:block;}
+.show{
+    display:block;
+}
 body {
     font: 14px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,Helvetica,Geneva,sans-serif;
     font-style: normal;

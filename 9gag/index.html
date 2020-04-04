@@ -21,33 +21,55 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-        <script src="script.js"></script>
-        <link href="dark-mode.css">
+    <script src="script.js"></script>
+    <link href="dark-mode.css">
 </head>
 
 <body>
+    <div class="header-mobile">
+        <div class="mobile-header-left">
+            <a class="hamburger-menu">
+                <img src="img/menu5.png" alt="">
+            </a>
+            <a href="index.html" target="_self">
+                <img id="amblem" src="img/9gag2.png" alt="">
+            </a>
+        </div>
+        <div class="mobile-header-right">
+            <div class="mobile-dark-mode">
+                <img src="img/moon1.png" alt="">
+            </div>
+            <div class="mobile-search">
+                <img src="img/search2.png" alt="">
+            </div>
+            <div class="mobile-account">
+                <img src="img/account1.png" alt="">
+            </div>
+
+        </div>
+    </div>
     <div class="top-nav">
         <div class="nav-menu">
             <div id="nav-left">
                 <a href="index.html" target="_self"><img src="img/9gag.png" id="amblem"></img>
-                <a href="#"><img src="img/dice.png" id="zar">Random</a>
-                <a href="#">Get APP</a>
-                <a href="#">Shop</a>
-                <a href="#">COVID</a>
-              
+                    <a href="#"><img src="img/dice.png" id="zar">Random</a>
+                    <a href="#">Get APP</a>
+                    <a href="#">Shop</a>
+                    <a href="#">COVID</a>
+
             </div>
             <div id="nav-right">
-                <a onclick="darkMode()" href="#" ><img src="img/moon.png" alt=""></a>
+                <a onclick="darkMode()" href="#"><img src="img/moon.png" alt=""></a>
                 <a href="#" id="#dark1"><img src="img/search.png" alt=""></a>
                 <a href="#"><img src="img/bell.png" alt=""></a>
                 <a href="#" class="btn btn-success" id="header-sign-up" data-toggle="modal"
                     data-target="#modalRegisterForm"><i class="fas fa-user-plus"></i>Sign up</a>
-                <a href="#" class="btn btn-primary" data-target="#modalLoginForm" data-toggle="modal" id="header-sign-in"
-                    ><i class="fas fa-sign-in-alt"></i>Sign in</a>
+                <a href="#" class="btn btn-primary" data-target="#modalLoginForm" data-toggle="modal"
+                    id="header-sign-in"><i class="fas fa-sign-in-alt"></i>Sign in</a>
             </div>
         </div>
     </div>
-    
+
     <div class="container1" style="padding-top: 48px;">
         <div id="container">
             <div class="section-sidebar">
@@ -191,12 +213,14 @@
                                             </p>
                                         </div>
                                         <a href="#" target="_blank">
-                                            <a href="gönderi_sayfası.html" target="_blank"><h1 id="Ana-sayfa-post-head">Lorem ipsum dolor sit amet.</h1></a>
+                                            <a href="gönderi_sayfası.html" target="_blank">
+                                                <h1 id="Ana-sayfa-post-head">Lorem ipsum dolor sit amet.</h1>
+                                            </a>
                                         </a>
                                     </header>
                                     <div class="post-container">
                                         <div class="post-container">
-                                            <a href="gönderi_sayfası.html" >
+                                            <a href="gönderi_sayfası.html">
                                                 <img src="img/biplane-4817195_640.jpg" alt="">
                                             </a>
                                         </div>
@@ -237,6 +261,7 @@
                                 </article>
                             </div>
                         </div>
+
                     </section>
                 </div>
 
@@ -341,7 +366,7 @@
                             <i class="fas fa-envelope"></i>
                             <input type="email" placeholder="E-posta" id="eMail" class="form-control validate">
                         </div>
-                        
+
                     </div>
 
                     <div class="modal-footer d-flex justify-content-center">

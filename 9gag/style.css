@@ -1390,6 +1390,9 @@ a:hover{
   .header-mobile{
       display: none;
   }
+  .container1{
+      padding-top: 48px;
+  }
 }
   @media only screen and (max-width: 600px) {
     *{
@@ -1411,7 +1414,7 @@ a:hover{
     .mobile-header-right{
         display: inline;
         position: absolute;
-        right: 8px;
+        right: 0px;
     }
     .mobile-search{
         display: inline;
@@ -1422,7 +1425,7 @@ a:hover{
         margin-right: 10px;
     }
     #amblem{
-        margin-left: 10px;
+        margin-left: 20px;
     }
     #amblem:hover{
         opacity: .8;
@@ -1437,4 +1440,51 @@ a:hover{
     .section-sidebar{
         display: none;
     }
+    .mobile-header-kategori{
+        display: block;
+        padding: 5px 0 0 0;
+        height: 35px;
+        z-index: 13;
+        position: fixed;  
+        top: 48px;
+        width: 100%;
+        border-bottom: rgb(190, 190, 190) 1px solid;
+        box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    }
+    #list-view-2{
+        margin-top: 78px;
+    }
+    #hot{
+        color: black;
+        font-weight: 700;
+        text-align: center;
+        float: left;
+        box-shadow: inset 0 -2px 0 #000;
+        width: 33%;
+        padding-bottom: 5px;
+    }
+    #trending{
+        font-weight: 700;
+        color: #A5A5A5;
+        text-align: center;
+        float: left;
+        width: 33%;
+    }
+    #fresh{
+        font-weight: 700;
+        color: #A5A5A5;
+        text-align: center;
+        float: left;
+        width: 33%;
+    }
+    #hot:hover{
+        text-decoration: none;
+    }
+    #trending:hover{
+        text-decoration: none;
+    }
+    #fresh:hover{
+        text-decoration: none;
+    }
+
 }

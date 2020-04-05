@@ -1439,27 +1439,35 @@ a:hover{
     }
     .section-sidebar{
         display: none;
+        
     }
     .mobile-header-kategori{
         display: block;
         padding: 5px 0 0 0;
         height: 35px;
-        z-index: 13;
+        z-index: 23;
         position: fixed;  
         top: 48px;
         width: 100%;
+        background-color: white;
         border-bottom: rgb(190, 190, 190) 1px solid;
         box-shadow: 0 1px 2px rgba(0,0,0,.2);
     }
+    .active{
+        color: black;
+        box-shadow: inset 0 -2px 0 #000;
+    }
     #list-view-2{
-        margin-top: 78px;
+        margin-top: 98px;
+    }
+    .mobile-header-kategori ul li{
+        display: inline;
     }
     #hot{
-        color: black;
+        color: #AEAEAE;
         font-weight: 700;
         text-align: center;
         float: left;
-        box-shadow: inset 0 -2px 0 #000;
         width: 33%;
         padding-bottom: 5px;
     }
@@ -1469,6 +1477,7 @@ a:hover{
         text-align: center;
         float: left;
         width: 33%;
+        padding-bottom: 5px;
     }
     #fresh{
         font-weight: 700;
@@ -1476,6 +1485,7 @@ a:hover{
         text-align: center;
         float: left;
         width: 33%;
+        padding-bottom: 5px;
     }
     #hot:hover{
         text-decoration: none;
@@ -1486,5 +1496,21 @@ a:hover{
     #fresh:hover{
         text-decoration: none;
     }
-
+    .featured-tag{
+        position: relative;
+        width: 1000px;
+        top: 98px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        height: 64px;
+        padding: 14px 12px;
+    }
+    .featured-tag a{
+        background-color: black;
+        border-radius: 23px;
+        color: white;
+        padding: 4px 8px;
+        margin: 0 3px;
+        display: inline;
+    }
 }

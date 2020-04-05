@@ -15,7 +15,7 @@ function dropdownMenu() {
       }
     }
   }
-  function darkMode() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
- }
+ 
+  $(document).on('click','div a',function(){
+    $(this).addClass('active').siblings().removeClass('active')
+  })

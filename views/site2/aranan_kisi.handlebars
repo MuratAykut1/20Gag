@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+    <script src="https://kit.fontawesome.com/8b528c53f6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/8b528c53f6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="/dark-mode-switch.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+</head>
+
+
+
+<body>
+    <div class="header-mobile">
+        <div class="mobile-header-left">
+            <a class="hamburger-menu">
+                <img src="img/menu6.png" alt="">
+            </a>
+            <a href="/" target="_self">
+                <img id="amblem" src="img/9gag2.png" alt="">
+            </a>
+        </div>
+        <div class="mobile-header-right">
+            <div class="mobile-dark-mode">
+                <img src="img/moon3.png" alt="">
+            </div>
+            <div class="mobile-search">
+                <img src="img/search3.png" alt="">
+            </div>
+            <div class="mobile-account">
+                <a href="javascript:dropdownMenu()" class="dropbtn"><img src="img/account.png" alt=""></a>
+            </div>
+            <div id=#dropdown-menu class="popup-menu user">
+                <ul>
+                    <li><a style="color: black;" href="/profil">Profilim</a></li>
+                    <li><a style="color: black;" href="/settings">Ayarlar</a></li>
+                    <li><a style="color: black;" href="/users/logout">Çıkış</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="mobile-header-kategori">
+
+        <a href="#" id="hot" class="active">
+            Hot
+        </a>
+        <a href="#" id="trending">
+            Trending
+        </a>
+        <a href="#" id="fresh">
+            Fresh
+        </a>
+
+    </div>
+    <header class="top-nav">
+        <nav class="nav-menu">
+            <div id="nav-left">
+                <a href="/" target="_self"><img src="/img/9gag.png" id="amblem"></img>
+                    <a href="#"><img src="/img/dice.png" id="zar">Random</a>
+                    <a href="#">Get APP</a>
+                    <a href="#">Shop</a>
+                    <a href="#">COVID</a>
+
+            </div>
+            <div id="nav-right">
+                <a onclick="darkMode()" href="#"><img src="/img/moon.png" alt=""></a>
+
+                {{#if displayLink}}
+                <a href="/users/register" class="btn btn-success" id="header-sign-up"><i
+                        class="fas fa-user-plus"></i>Register</a>
+                <a href="/users/login" class="btn btn-primary" id="header-sign-in"><i
+                        class="fas fa-sign-in-alt"></i>Login</a>
+                {{/if}}
+                {{#unless displayLink}}
+
+                <div class="dropdown d-inline">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="/img/account.png" alt=""> </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" style="color: black;" href="/profil">Profilim</a>
+                        <a class="dropdown-item" style="color: black;" href="/settings">Ayarlar</a>
+                        <a class="dropdown-item" style="color: black;" href="/users/logout">Çıkış</a>
+                    </div>
+                </div>
+                {{/unless}}
+
+            </div>
+        </nav>
+    </header>
+
+    <div class="container1">
+        <div id="container">
+            <div class="section-sidebar">
+                <div class="stealthy-scroll-container">
+                    <section class="popular">
+                        <ul class="nav">
+                            <li>
+                                <a href="#" class="label">
+                                    <i class="icon hot"><img src="/img/fire.png" class="image" height="24px"
+                                            width="24px"></i>
+                                    Hot
+                                </a>
+                                <a href="#" class="label">
+                                    <i class="icon trending"><img src="/img/trending.png" class="image" height="24px"
+                                            width="24px"></i>
+                                    Trending
+                                </a>
+                                <a href="#" class="label">
+                                    <i class="icon fresh"><img src="/img/clock.png" class="image" height="24px"
+                                            width="24px"></i>
+                                    Fresh
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class>
+                        <header>
+                            <h3>Popular</h3>
+                        </header>
+                        <ul class="nav">
+                            {{#each categories}}
+                            <li class>
+                                <a href="/posts/category/{{_id}}" class="label">
+                                    <i class="thumbnail">
+                                        <picture>
+                                            <img src="/img/turkey.png">
+                                        </picture>
+                                    </i>
+                                    {{name}}
+                                </a>
+                            </li>
+                            {{/each}}
+
+                        </ul>
+                    </section>
+                    <section class=>
+                        <section>
+                            <section class="footer"></section>
+                </div>
+            </div>
+            <div class="page">
+                <div class="main-wrap">
+                    <div class="featured-tag">
+                        <a href="#">
+                            Animal
+                        </a>
+                        <a href="#">
+                            Coronavirus
+                        </a>
+                        <a href="#">
+                            Quarantine
+                        </a>
+                        <a href="#">
+                            Toilet Paper
+                        </a>
+                        <a href="#">
+                            Wuhan
+                        </a>
+                        <a href="#">
+                            Wuhan
+                        </a>
+                    </div>
+                    <form action="/users/search" method="GET">
+                        <input class="search-input form-control" name="look" type="text" placeholder="Search"
+                            style="display: inline-block;">
+                        <button style="display: inline;" class="btn btn-success" type="submit"><img src="../../img/search.png" alt=""></button>
+                    </form>
+
+                    <section id="list-view-2">
+                        {{#if sessionFlash.message}}
+                        <div class="{{sessionFlash.type}}">
+                            {{sessionFlash.message}}
+                        </div>
+                        {{/if}}
+                        {{#each userName}}
+                        <div class="post-section">
+                            <a target="_self" href="/users/profil/{{_id}}" class="section"> {{userName}} </a>
+                        </div>
+                        <hr>
+                        {{/each}}
+
+                    </section>
+                </div>
+
+                <section id="right-section" style="height:3114px">
+                    <div id="right-section-content" style="position:relative;width:inherit">
+                        <section class="block-feature-color">
+
+                            <ul>
+                                {{#each post}}
+                                <li>
+                                    <a href="/gonderi_sayfasi/{{_id}}" target="_blank">
+                                        <div class="img-container">
+                                            <img src="{{postImage}}" alt="">
+                                        </div>
+                                        <div class="info-container">
+                                            <h3 id="info-container-header">
+                                                {{definition}}
+                                            </h3>
+                                        </div>
+                                    </a>
+                                </li>
+                                {{/each}}
+
+                            </ul>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+
+</body>
+
+</html>

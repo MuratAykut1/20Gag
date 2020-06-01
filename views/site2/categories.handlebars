@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/profil.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+    <script src="https://kit.fontawesome.com/8b528c53f6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="/dark-mode-switch.min.js"></script>
+</head>
+<script>
+    function dropdownMenu() {
+        document.getElementById("#dropdown-menu").classList.toggle("show");
+    }
+
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("popup-menu");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+
+<body>
+    <div class="header-back">
+        <div class="header-back-component">
+            <a href="/" target="_self"><img src="/img/back.png" alt=""> <span
+                    class="header-post">MrtÇiftçi</span></img></a>
+        </div>
+        <hr id="hr" style="position: relative; top: -7px;">
+    </div>
+    <div class="mobile-header-kategori">
+
+        <a href="#" id="hot" class="active">
+            Home
+        </a>
+        <a href="#" id="trending">
+            Posts
+        </a>
+        <a href="#" id="fresh">
+            Comments
+        </a>
+
+    </div>
+    <header id="top-nav">
+        <nav class="nav-menu">
+            <div id="nav-left">
+                <a href="/"><img src="/img/9gag.png" id="amblem"></a>
+                <a href="#"><img src="/img/dice.png" id="zar">Random</a>
+                <a href="#">Get APP</a>
+                <a href="#">Shop</a>
+                <a href="#">COVID</a>
+
+            </div>
+            <div id="nav-right">
+                <a href="#" onclick="darkMode()"><img src="/img/moon.png" alt=""></a>
+                <a href="#"><img src="/img/search.png" alt=""></a>
+                <a href="javascript:dropdownMenu()" class="dropbtn"><img src="img/account.png" alt=""></a>
+                <a href="/posts/new" class="btn btn-primary" alt=""><img src="img/add.png" id="add" height="16"
+                        width="31">
+                    Upload</a>
+                <div id=#dropdown-menu class="popup-menu user">
+                    <ul>
+                        <li><a style="color: black;" href="/profil">Profilim</a></li>
+                        <li><a style="color: black;" href="/settings">Ayarlar</a></li>
+                        <li><a style="color: black;" href="/users/logout">Çıkış</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <div class="clearfix"></div>
+    <div class="row">
+        <div class="col-md-4">
+
+
+            <form action="" method="POST" enctype="multipart/form-data"
+                style="position: relative; top:  50px">
+
+                <div class="col-md-10">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="kategori ismi" required="required"
+                            data-validation-required-message="Lütfen bir kategori ismi giriniz">
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-lg-12 ml-0">
+                    <div id="success"></div>
+                    <button class="btn btn-success" type="submit">Add category</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-md-8" style="margin-top:50px">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NAME</th>
+                        <th>DELETE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each categories}}
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{name}}</td>
+                        <td>
+                            <form action="/admin/categories/{{id}}?_method=DELETE" method="POST">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="btn btn-danger">DELETE</button>
+                            </form>
+                        </td>
+
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <body>

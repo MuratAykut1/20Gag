@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/8b528c53f6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+</head>
+
+<body>
+    <div class="top-nav">
+        <div class="nav-menu">
+            <div id="nav-left">
+                <a href="/" target="_self"><img src="/img/9gag.png" id="amblem"></img>
+                    <a href="#"><img src="/img/dice.png" id="zar">Random</a>
+                    <a href="#">Get APP</a>
+                    <a href="#">Shop</a>
+                    <a href="#">COVID</a>
+            </div>
+            <div id="nav-right">
+                <a href="#"><img src="/img/moon.png" alt=""></a>
+                <a href="#"><img src="/img/search.png" alt=""></a>
+                <a href="#"><img src="/img/bell.png" alt=""></a>
+                {{#if displayLink}}
+                <a href="/users/register" class="btn btn-success" id="header-sign-up"><i
+                        class="fas fa-user-plus"></i>Register</a>
+                <a href="/users/login" class="btn btn-primary" id="header-sign-in"><i
+                        class="fas fa-sign-in-alt"></i>Login</a>
+                {{/if}}
+                {{#unless displayLink}}
+
+                <div class="dropdown d-inline">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="/img/account.png" alt=""> </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" style="color: black;" href="/profil">Profilim</a>
+                        <a class="dropdown-item" style="color: black;" href="/settings">Ayarlar</a>
+                        <a class="dropdown-item" style="color: black;" href="/users/logout">Çıkış</a>
+                    </div>
+                </div>
+                {{/unless}}
+            </div>
+        </div>
+    </div>
+    <div class="header-back">
+        <div class="header-back-component">
+            <a href="/" target="_self"><img src="/img/back.png" alt=""> <span class="header-post">POST</span></a>
+        </div>
+        <hr id="hr" style="position: relative; top: -7px;">
+    </div>
+
+    <div class="container1" style="position: relative; top: -35px;">
+        <div id="container">
+            <div class="section-sidebar">
+                <div class="stealthy-scroll-container">
+                    <section class="popular">
+                        <ul class="nav">
+                            <li>
+                                <a href="#" class="label">
+                                    <i class="icon hot"><img src="/img/fire.png" class="image" height="24px"
+                                            width="24px"></i>
+                                    Hot
+                                </a>
+                                <a href="#" class="label">
+                                    <i class="icon trending"><img src="/img/trending.png" class="image" height="24px"
+                                            width="24px"></i>
+                                    Trending
+                                </a>
+                                <a href="#" class="label">
+                                    <i class="icon fresh"><img src="/img/clock.png" class="image" height="24px"
+                                            width="24px"></i>
+                                    Fresh
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class>
+                        <header>
+                            <h3>Popular</h3>
+                        </header>
+                        <ul class="nav">
+                            <li class><a href="#" class="label">
+                                    <i class="thumbnail">
+                                        <picture>
+                                            <img src="/img/turkey.png">
+                                        </picture>
+                                    </i>
+                                    Türkiye
+                                </a></li>
+                            <li class>
+                                <a href="#" class="label">
+                                    <i class="thumbnail">
+                                        <picture>
+                                            <img src="/img/virus.png">
+                                        </picture>
+                                    </i>
+                                    Koronavirüs
+                                </a> </li>
+                            <li class>
+                                <a href="#" class="label">
+                                    <i class="thumbnail">
+                                        <picture>
+                                            <img src="/img/funny.png">
+                                        </picture>
+                                    </i>
+                                    Komik
+                                </a> </li>
+                            <li class>
+                                <a href="#" class="label">
+                                    <i class="thumbnail">
+                                        <picture>
+                                            <img src="/img/dog.png">
+                                        </picture>
+                                    </i>
+                                    Hayvanlar
+                                </a> </li>
+                            <li class>
+                                <a href="#" class="label">
+                                    <i class="thumbnail">
+                                        <picture>
+                                            <img src="/img/gif.png">
+                                        </picture>
+                                    </i>
+                                    GIF
+                                </a> </li>
+                            <li class>
+                                <a href="#" class="label">
+                                    <i class="thumbnail">
+                                        <picture>
+                                            <img src="/img/game-controller.png">
+                                        </picture>
+                                    </i>
+                                    Oyun
+                                </a> </li>
+                            <li class>
+                                <a href="#" class="label">
+                                    <i class="thumbnail">
+                                        <picture>
+                                            <img src="/img/soccer.png">
+                                        </picture>
+                                    </i>
+                                    Futbol
+                                </a> </li>
+                            <li class>
+                                <a href="#" class="label">
+                                    <i class="thumbnail">
+                                        <picture>
+                                            <img src="/img/heart.png">
+                                        </picture>
+                                    </i>
+                                    İlişkiler
+                                </a> </li>
+                        </ul>
+                    </section>
+                    <section class=>
+                        <section>
+                            <section class="footer"></section>
+                </div>
+            </div>
+            <div class="page">
+                <div class="main-wrap">
+
+                    <section id="list-view-2">
+                        <div class="list-stream" style="min-height: 0;">
+                            <div>
+                                <article>
+                                    <header>
+                                        <div class="post-section">
+                                            <a target="_blank" href="#" id="funny">
+
+                                                <img src="/img/humor.png" alt="">
+                                            </a>
+                                            <p class="message">
+                                                <a target="_blank" href="#" class="section"> Funny </a>
+                                                <span>{{post.date}}</span>
+                                            </p>
+                                        </div>
+                                        <h1 class="gönderi-h1">
+                                           {{post.definition}}
+                                        </h1>
+                                        <h3 class="gönderi-h6">
+                                            {{post.definition}}
+                                        </h3>
+                                        <p class="post-meta">
+                                            <a href="#">707 points</a> . <a href="#">27 comments</a>
+                                        </p>
+                                    </header>
+                                    <div class="gönderi-üstü-butonlar">
+                                        <div class="gönderi-üstü-butonlar-satırı">
+                                            <div class="oylama">
+
+                                                <ul class="btn-oylama">
+                                                    <li>
+                                                        <a href="#" class="Beğenme">
+                                                            <img src="/img/up-arrow1.png" alt="">
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="Beğenmeme">
+                                                            <img src="/img/down-arrow.png" alt="">
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="R-İkon">
+                                                            <img src="/img/icons8-r-24.png" alt="">
+                                                        </a>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <div class="share">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#" class="facebook"><i
+                                                                class="fab fa-facebook-f"></i>Facebook</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="twitter"><i
+                                                                class="fab fa-twitter"></i>Twitter</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="post-container-mobile" style="margin: 0 auto" ;>
+                                        <div class="post-container">
+                                            <a href="#">
+                                                <img src="{{post.postImage}}" alt="">
+                                            </a>
+                                        </div>
+
+                                        <div class="post-text-container"></div>
+                                    </div>
+                                    <div class="Gönderinin-Alt-Kısmı">
+                                        <ul class="Gönderinin-Altındaki-Butonlar">
+                                            <li>
+                                                <a href="#" class="Beğenme">
+                                                    <img src="/img/up-arrow1.png" alt=""> <span>236</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="Beğenmeme">
+                                                    <img src="/img/down-arrow.png" alt=""><span>236</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="Yorum">
+                                                    <img src="/img/speech-bubble.png" alt=""><span>236</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="R-İkon">
+                                                    <img src="/img/icons8-r-24.png" alt=""><span>SHARE</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </article>
+                                <hr id="hr">
+                            </div>
+                        </div>
+                    </section>
+                    <section class="Gönderi-Altı-Yorumlar">
+                        <div class="Comments">
+                            <div class="Yorumlar-kısmı">
+                                <div class="Yorum-yapma-kısmı">
+                                    <div class="profil-fotosu">
+                                        <div class="image-container">
+                                            <a href="/profil" target="_blank">
+                                                <img src="/img/account.png" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="upload">
+                                        <div class="text-area">
+                                            <div>
+                                                <textarea style="resize: none;" placeholder="Yorumlar yazabilirsiniz..."
+                                                    class="post-text-area"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="action">
+                                            <div class="Kamera">
+                                                <a href="#" class="cmr">
+                                                    <img src="/img/photo.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="post">
+                                                <a href="#" class="cancel-input">Cancel</a>
+                                                <button type="button" class="btn btn-primary">Post</button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div id="yorum">
+                                    <div class="comment-entry">
+                                        <div class="avatar">
+                                            <div class="image-container">
+                                                <a href="/profil" target="_blank">
+                                                    <img src="/img/account.png" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="payload">
+                                        <div class="info">
+                                            <div class="info-container">
+                                                <a href="#" target="_blank" class="username">Aykut Yıldız</a>
+                                                <span class="meta">
+                                                    <span>
+                                                        <span class="points">
+                                                            37 points
+                                                        </span>
+                                                        <span>.</span>
+                                                    </span>
+                                                    <span class="time">
+                                                        <a href="#" target="_target"></a>
+                                                    </span>
+                                                </span>
+
+                                            </div>
+                                        </div>
+                                        <div class="Mobile-Gönderi-Altı">
+                                            <div class="Mobile-Gönderi-Altı-Foto">
+                                                <a href="/profil">
+                                                    <img src="/img/account4.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div id="avatar-yanı-isim">
+                                                <a href="/profil">
+                                                    Aykut Yıldız
+                                                </a>
+                                                <span id="Mobile-gönderi-zaman">2h</span>
+                                            </div>
+                                            <div class="content1">
+                                                Yorum Yorum Yorum Yorum
+                                            </div>
+
+                                        </div>
+                                        <div class="action2">
+
+                                            <div class="vote-buttons">
+                                                <a class="mobile-gönderi-reply" href="#">
+                                                    Reply
+                                                </a>
+                                                <a href="#">
+                                                    <img src="/img/top-arrow4.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="/img/down-arrow2.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="/img/icons8-r-24.png" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <hr id="hr">
+                                        <div class="Mobile-Gönderi-Altı">
+                                            <div class="Mobile-Gönderi-Altı-Foto">
+                                                <a href="/profil">
+                                                    <img src="/img/account4.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div id="avatar-yanı-isim">
+                                                <a href="/profil">
+                                                    Aykut Yıldız
+                                                </a>
+                                                <span id="Mobile-gönderi-zaman">2h</span>
+                                            </div>
+                                            <div class="content1">
+                                                Yorum Yorum Yorum Yorum
+                                            </div>
+
+                                        </div>
+                                        <div class="action2">
+
+                                            <div class="vote-buttons">
+                                                <a class="mobile-gönderi-reply" href="#">
+                                                    Reply
+                                                </a>
+                                                <a href="#">
+                                                    <img src="/img/top-arrow4.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="/img/down-arrow2.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="/img/icons8-r-24.png" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <hr id="hr">
+                                        <div class="Mobile-Gönderi-Altı">
+                                            <div class="Mobile-Gönderi-Altı-Foto">
+                                                <a href="/profil">
+                                                    <img src="/img/account4.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div id="avatar-yanı-isim">
+                                                <a href="/profil">
+                                                    Aykut Yıldız
+                                                </a>
+                                                <span id="Mobile-gönderi-zaman">2h</span>
+                                            </div>
+                                            <div class="content1">
+                                                Yorum Yorum Yorum Yorum
+                                            </div>
+
+                                        </div>
+                                        <div class="action2">
+
+                                            <div class="vote-buttons">
+                                                <a class="mobile-gönderi-reply" href="#">
+                                                    Reply
+                                                </a>
+                                                <a href="#">
+                                                    <img src="/img/top-arrow4.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="/img/down-arrow2.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="/img/icons8-r-24.png" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <hr id="hr">
+
+                                        <div class="Mobile-Gönderi-Altı">
+                                            <div class="Mobile-Gönderi-Altı-Foto">
+                                                <a href="/profil">
+                                                    <img src="/img/account4.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div id="avatar-yanı-isim">
+                                                <a href="/profil">
+                                                    Aykut Yıldız
+                                                </a>
+                                                <span id="Mobile-gönderi-zaman">2h</span>
+                                            </div>
+                                            <div class="content1">
+                                                Yorum Yorum Yorum Yorum
+                                            </div>
+                                        </div>
+                                        <div class="action2">
+
+                                            <div class="vote-buttons">
+                                                <a class="mobile-gönderi-reply" href="#">
+                                                    Reply
+                                                </a>
+                                                <a href="#">
+                                                    <img src="/img/top-arrow4.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="/img/down-arrow2.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="/img/icons8-r-24.png" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <hr id="hr">
+
+                                        <div class="media">
+                                            <a href="#" target="_blank" class="img-embed">
+                                                <img src="/img/multi-colored-elephant-graffiti-3977529.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="action1">
+                                            <span>
+                                                <a href="#" class="reply">Reply</a>
+                                            </span>
+                                            <div class="vote-buttons">
+                                                <a href="#">
+                                                    <img src="/img/up-arrow1.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="/img/down-arrow.png" alt="">
+                                                </a>
+                                                <a href="#">
+                                                    <img src="/img/icons8-r-24.png" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <section id="right-section" style="height:3114px">
+                    <div id="right-section-content" style="position:relative;width:inherit">
+                        <section class="block-feature-color">
+                            <ul>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <div class="img-container">
+                                            <img src="/img/multi-colored-elephant-graffiti-3977529.jpg" alt="">
+                                        </div>
+                                        <div class="info-container">
+                                            <h3 id="info-container-header">
+                                                Lorem ipsum dolor sit Lorem Lorem Lorem Lorem Lorem Lorem
+                                            </h3>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <div class="img-container">
+                                            <img src="/img/multi-colored-elephant-graffiti-3977529.jpg" alt="">
+                                        </div>
+                                        <div class="info-container">
+                                            <h3 id="info-container-header">
+                                                Lorem ipsum dolor sit Lorem Lorem Lorem Lorem Lorem Lorem
+                                            </h3>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">
+                                        <div class="img-container">
+                                            <img src="/img/multi-colored-elephant-graffiti-3977529.jpg" alt="">
+                                        </div>
+                                        <div class="info-container">
+                                            <h3 id="info-container-header">
+                                                Lorem ipsum dolor sit Lorem Lorem Lorem Lorem Lorem Lorem
+                                            </h3>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="mobile-yorum-yapma">
+                <a href="#" data-target="#modalYorumForm" data-toggle="modal" class="mobile-textarea"> Yorumunuz </a>
+            </div>
+        </div>
+        <div class="modal fade" id="modalYorumForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold">Yorumunuz</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="md-form">
+                            <textarea style="resize: none;width: 100%;" placeholder="Yorumlar yazabilirsiniz..."
+                                class="post-text-area"></textarea>
+                        </div>
+
+                        <div class="md-form">
+                            <img src="img/photo.png">
+                            <input type="file">
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button class="btn btn-success">Gönder</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold"><i class="fas fa-sign-in-alt"></i>Sign in</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="md-form">
+                        <i class="fas fa-id-card-alt"></i>
+                        <input type="text" placeholder="Kullanıcı Adı" id="KullanıcıAdı" class="form-control validate">
+                    </div>
+
+                    <div class="md-form Sifre-form">
+                        <i class="fas fa-lock prefix grey-text"></i>
+                        <input type="password" placeholder="Şifre" id="Şifre" class="form-control validate">
+                    </div>
+
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button class="btn btn-success">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold"><i class="fas fa-user-plus"></i>Sign up</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body ">
+                    <div class="md-form">
+                        <i class="fas fa-id-card-alt"></i>
+                        <input type="text" placeholder="Kullanıcı Adı" id="KullanıcıAdı" class="form-control validate">
+                    </div>
+
+                    <div class="md-form Sifre-form">
+                        <i class="fas fa-lock prefix grey-text"></i>
+                        <input type="password" placeholder="Şifre" id="Şifre" class="form-control validate">
+                    </div>
+                    <div class="md-form eMail-form">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="E-posta" id="eMail" class="form-control validate">
+                    </div>
+
+                </div>
+
+                <div class="modal-footer d-flex justify-content-center">
+                    <button class="btn btn-success">Kayıt Ol</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

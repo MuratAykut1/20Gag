@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/8b528c53f6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+    <script src="https://kit.fontawesome.com/8b528c53f6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="/dark-mode-switch.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="header-mobile">
+        <div class="mobile-header-left">
+            <a class="hamburger-menu">
+                <img src="/img/menu6.png" alt="">
+            </a>
+            <a href="/" target="_self">
+                <img id="amblem" src="/img/9gag2.png" alt="">
+            </a>
+        </div>
+        <div class="mobile-header-right">
+            <div class="mobile-dark-mode">
+                <img src="/img/moon3.png" alt="">
+            </div>
+            <div class="mobile-search">
+                <img src="/img/search3.png" alt="">
+            </div>
+            {{#if displayLink}}
+            <a href="/users/register" class="btn btn-success" id="header-sign-up"><i
+                    class="fas fa-user-plus"></i>Register</a>
+            <a href="/users/login" class="btn btn-primary" id="header-sign-in"><i
+                    class="fas fa-sign-in-alt"></i>Login</a>
+            {{/if}}
+            {{#unless displayLink}}
+
+            <div class="dropdown d-inline">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="/img/account.png" alt=""> </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" style="color: black;" href="/profil">Profilim</a>
+                    <a class="dropdown-item" style="color: black;" href="/settings">Ayarlar</a>
+                    <a class="dropdown-item" style="color: black;" href="/users/logout">Çıkış</a>
+                </div>
+            </div>
+            {{/unless}}
+        </div>
+
+    </div>
+
+    <div class="top-nav">
+        <div class="nav-menu">
+            <div id="nav-left">
+                <a href="/" target="_self"><img src="/img/9gag.png" id="amblem"></img>
+                    <a href="#"><img src="/img/dice.png" id="zar">Random</a>
+                    <a href="#">Get APP</a>
+                    <a href="#">Shop</a>
+                    <a href="#">COVID</a>
+
+            </div>
+            <div id="nav-right">
+                <a onclick="darkMode()" href="#"><img src="/img/moon.png" alt=""></a>
+                <a href="#" id="#dark1"><img src="/img/search.png" alt=""></a>
+                {{#if displayLink}}
+                <a href="/users/register" class="btn btn-success" id="header-sign-up"><i
+                        class="fas fa-user-plus"></i>Register</a>
+                <a href="/users/login" class="btn btn-primary" id="header-sign-in"><i
+                        class="fas fa-sign-in-alt"></i>Login</a>
+                {{/if}}
+                {{#unless displayLink}}
+
+                <div class="dropdown d-inline">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="/img/account.png" alt=""> </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" style="color: black;" href="/profil">Profilim</a>
+                        <a class="dropdown-item" style="color: black;" href="/settings">Ayarlar</a>
+                        <a class="dropdown-item" style="color: black;" href="/users/logout">Çıkış</a>
+                    </div>
+                </div>
+                {{/unless}}
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-dialog" role="document">
+        <form action="/posts/test" method="POST" enctype="multipart/form-data" style="position: relative; top:  50px">
+            <div class="modal-content">
+
+                <div class="modal-header text-center" id="modal-header-upload">
+                    <h4 class="modal-title w-100 font-weight-bold">Paylaşım Yapma</h4>
+
+                </div>
+                <div class="modal-body">
+
+                    <div class="scaper">
+                        <a href="#" id="upload-file-button" class="choose-file">
+                            <div class="upload-folder-img">
+                                <img src="/img/folder.png" alt="">
+                            </div>
+                            <div class="upload-açıklama">
+                                <p>Paylaşacağınız gönderiyi seçiniz</p>
+                            </div>
+                            <input type="file" name="postImage" value="Dosya Seç">
+                        </a>
+                    </div>
+                    <div class="gönderi-yaparken-yorumu">
+                        <textarea name="definition" id="gönderi-yorumu" placeholder="Gönderiniz hakkında yorum kısmı"
+                            style="resize: none;"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <h4>Kategori seçimi</h4>
+                        <select class="form-control" name="categoryName" id="">
+                            {{#each categories}}
+                                <option value="{{id}}">{{name}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button type="submit" class="btn btn-success">Paylaş</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

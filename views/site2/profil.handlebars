@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/profil.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/8b528c53f6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="/dark-mode-switch.min.js"></script>
+</head>
+<script>
+    function dropdownMenu() {
+        document.getElementById("#dropdown-menu").classList.toggle("show");
+    }
+
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("popup-menu");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+
+<body>
+    <div class="header-back">
+        <div class="header-back-component">
+            <a href="/" target="_self"><img src="/img/back.png" alt=""> <span
+                    class="header-post">MrtÇiftçi</span></img></a>
+        </div>
+        <hr id="hr" style="position: relative; top: -7px;">
+    </div>
+    <div class="mobile-header-kategori">
+
+        <a href="#" id="hot" class="active">
+            Home
+        </a>
+        <a href="#" id="trending">
+            Posts
+        </a>
+        <a href="#" id="fresh">
+            Comments
+        </a>
+
+    </div>
+    <header id="top-nav">
+        <nav class="nav-menu">
+            <div id="nav-left">
+                <a href="/"><img src="/img/9gag.png" id="amblem"></a>
+                <a href="#"><img src="/img/dice.png" id="zar">Random</a>
+                <a href="#">Get APP</a>
+                <a href="#">Shop</a>
+                <a href="#">COVID</a>
+
+            </div>
+            <div id="nav-right">
+                <a href="#" onclick="darkMode()"><img src="/img/moon.png" alt=""></a>
+                <a href="#"><img src="/img/search.png" alt=""></a>
+                <a href="javascript:dropdownMenu()" class="dropbtn"><img src="/img/account.png" alt=""></a>
+                <a href="/posts/new" class="btn btn-primary" alt=""><img src="/img/add.png" id="add" height="16"
+                        width="31">
+                    Upload</a>
+                <div id=#dropdown-menu class="popup-menu user">
+                    <ul>
+                        <li><a style="color: black;" href="/profil">Profilim</a></li>
+                        <li><a style="color: black;" href="/settings">Ayarlar</a></li>
+                        <li><a style="color: black;" href="/users/logout">Çıkış</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <div>
+        <div id="container" style="padding-top: 48px;">
+            <div class="section-sidebar">
+                <div class="stealthy-scroll-container">
+                    <section class="popular">
+                        <ul class="nav">
+                            <li>
+                                <a href="#" class="label">
+                                    <i class="icon hot"><img src="/img/fire.png" class="image" height="24px"
+                                            width="24px"></i>
+                                    Hot
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="label">
+                                    <i class="icon trending"><img src="/img/trending.png" class="image" height="24px"
+                                            width="24px"></i>
+                                    Trending
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="label">
+                                    <i class="icon fresh"><img src="/img/clock.png" class="image" height="24px"
+                                            width="24px"></i>
+                                    Fresh
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class>
+                        <header>
+                            <h3>Popular</h3>
+                        </header>
+                        <ul class="nav">
+                            {{#each categories}}
+                            <li class>
+                                <a href="/posts/category/{{_id}}" class="label">
+                                    <i class="thumbnail">
+                                        <picture>
+                                            <img src="/img/turkey.png">
+                                        </picture>
+                                    </i>
+                                    {{name}}
+                                </a>
+                            </li>
+                            {{/each}}
+
+                        </ul>
+                    </section>
+                    <section class=>
+                        <section>
+                            <section class="footer"></section>
+                </div>
+            </div>
+
+            <div class="profile-page">
+                <div class="main-wrap">
+                    <div class="profile">
+                        <section class="profile-header">
+                            {{#each userName1}}
+
+                            <div class="img-container round">
+                                <img src="{{avatar}}" alt="Profile Pic" height="80px" width="80px">
+                            </div>
+                            <header>
+                                <h2>{{userName}}</h2>
+
+                                <p>@mrtciftci20</p>
+                            </header>
+                            <a href="/users/profil/favori/{{id}}">Favori Gonderilerim <img src="/img/star.png"
+                                    title="Favori Gönderilerimi Göster"></a>
+                            {{/each}}
+
+                        </section>
+                        <section class="profile-about">My Funny Collection</section>
+                        <div class="tab-bar">
+                            <ul class="menu">
+                                <li><a href="#" class="selected">Home</a></li>
+                                <li><a href="#">Posts</a></li>
+                                <li><a href="#">Comments</a></li>
+                                <li><a href="#">Upvotes</a></li>
+
+                            </ul>
+                        </div>
+
+                        <section id="list-view-2">
+                            {{#each posts}}
+
+                            <div class="list-stream" style="min-height: 0;">
+
+                                <div>
+                                    <div>
+                                        <header>
+                                            <div class="post-section">
+                                                <a target="_blank" href="#" id="funny">
+
+                                                    <img src="/img/humor.png" alt="">
+                                                </a>
+                                                <p class="message">
+                                                    <a target="_blank" href="#" class="section"> Funny </a>
+                                                    <span>{{date}}</span>
+                                                </p>
+                                            </div>
+
+                                            <a href="/gonderi_sayfasi/{{_id}}" target="_self">
+                                                <h1 id="Ana-sayfa-post-head">{{definition}}</h1>
+                                            </a>
+
+                                        </header>
+                                        <div class="post-container">
+                                            <div class="post-container">
+                                                <a href="/gonderi_sayfasi/{{_id}}">
+                                                    <img src="{{postImage}}" alt="">
+                                                </a>
+                                            </div>
+
+                                            <div class="post-text-container"></div>
+                                        </div>
+                                        <p class="post-meta">
+                                            <a href="#" target="_blank">1,985 points</a>
+                                            .
+                                            <a href="#" target="_blank">
+                                                33 comments
+                                            </a>
+                                        </p>
+                                        <div class="Gönderinin-Alt-Kısmı">
+                                            <ul class="Gönderinin-Altındaki-Butonlar">
+                                                <li>
+                                                    <a href="#" class="Beğenme">
+                                                        <img src="/img/up-arrow1.png" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="Beğenmeme">
+                                                        <img src="/img/down-arrow.png" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="Yorum">
+                                                        <img src="/img/speech-bubble.png" alt="">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="R-İkon">
+                                                        <img src="/img/icons8-r-24.png" alt="">
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            {{/each}}
+
+                        </section>
+                    </div>
+
+
+
+                </div>
+
+                <section id="right-section" style="height:3114px">
+                    <div id="right-section-content" style="position:relative;width:inherit">
+                        <section class="block-feature-color">
+                            <ul>
+                                <li>
+                                    <a href="/gonderi_sayfasi" target="_blank">
+                                        <div class="img-container">
+                                            <img src="/img/multi-colored-elephant-graffiti-3977529.jpg" alt="">
+                                        </div>
+                                        <div class="info-container">
+                                            <h3 id="info-container-header">
+                                                Lorem ipsum dolor sit Lorem Lorem Lorem Lorem Lorem Lorem
+                                            </h3>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/gonderi_sayfasi" target="_blank">
+                                        <div class="img-container">
+                                            <img src="/img/multi-colored-elephant-graffiti-3977529.jpg" alt="">
+                                        </div>
+                                        <div class="info-container">
+                                            <h3 id="info-container-header">
+                                                Lorem ipsum dolor sit Lorem Lorem Lorem Lorem Lorem Lorem
+                                            </h3>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/gonderi_sayfasi" target="_blank">
+                                        <div class="img-container">
+                                            <img src="/img/multi-colored-elephant-graffiti-3977529.jpg" alt="">
+                                        </div>
+                                        <div class="info-container">
+                                            <h3 id="info-container-header">
+                                                Lorem ipsum dolor sit Lorem Lorem Lorem Lorem Lorem Lorem
+                                            </h3>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </section>
+                <section id="sidebar"></section>
+
+            </div>
+
+        </div>
+        <div class="mobile-profile">
+            <section class="mobile-profile-header">
+                <div class="mobile-img-container round">
+                    <img src="/img/user.png" alt="Profile Pic" height="80px" width="80px">
+                </div>
+                <header>
+                    <h5>mrtciftci20</h5>
+                    <p class="Mobile-Kayıt-Süresi">20 days</p>
+                </header>
+            </section>
+            <div class="mobile-tab-bar">
+                <ul class="menu">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Posts</a></li>
+                    <li><a href="#">Comments</a></li>
+                    <li><a href="#">Upvotes</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="mobile-profile-about">My Funny Collection</p>
+        <hr id="hr">
+        <section class="mobile-list-view-2">
+            <div class="list-stream" style="min-height: 0;">
+                <div>
+                    <article>
+                        <header>
+                            <div class="post-section">
+                                <a target="_blank" href="#" id="funny">
+
+                                    <img src="/img/humor.png" alt="">
+                                </a>
+                                <p class="message">
+                                    <a target="_blank" href="#" class="section"> Funny </a>
+                                    .1d
+                                </p>
+                            </div>
+                            <a href="#" target="_blank">
+                                <a id="Başlık" href="/gonderi_sayfasi" target="_blank">
+                                    <h3 id="Ana-sayfa-post-head">Lorem ipsum dolor sit amet.</h3>
+                                </a>
+                            </a>
+                        </header>
+                        <div class="post-container">
+                            <div class="post-container">
+                                <a href="/gonderi_sayfasi">
+                                    <img src="/img/biplane-4817195_640.jpg" alt="">
+                                </a>
+                            </div>
+
+                            <div class="post-text-container"></div>
+                        </div>
+                        <p class="post-meta">
+                            <a href="#" target="_blank">1,985 points</a>
+                            .
+                            <a href="#" target="_blank">
+                                33 comments
+                            </a>
+                        </p>
+                        <div class="Gönderinin-Alt-Kısmı">
+                            <ul class="Gönderinin-Altındaki-Butonlar">
+                                <li>
+                                    <a href="#" class="Beğenme">
+                                        <img src="/img/up-arrow1.png" alt=""> <span>236</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="Beğenmeme">
+                                        <img src="/img/down-arrow.png" alt=""><span>236</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="Yorum">
+                                        <img src="/img/speech-bubble.png" alt=""><span>236</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="R-İkon">
+                                        <img src="/img/icons8-r-24.png" alt=""><span>SHARE</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                    <hr id="hr">
+
+                    <article>
+                        <header>
+                            <div class="post-section">
+                                <a target="_blank" href="#" id="funny">
+
+                                    <img src="/img/humor.png" alt="">
+                                </a>
+                                <p class="message">
+                                    <a target="_blank" href="#" class="section"> Funny </a>
+                                    .1d
+                                </p>
+                            </div>
+                            <a href="#" target="_blank">
+                                <a id="Başlık" href="/gönderi_sayfası" target="_blank">
+                                    <h3 id="Ana-sayfa-post-head">Lorem ipsum dolor sit amet.</h3>
+                                </a>
+                            </a>
+                        </header>
+                        <div class="post-container">
+                            <div class="post-container">
+                                <a href="/gönderi_sayfası">
+                                    <img src="/img/biplane-4817195_640.jpg" alt="">
+                                </a>
+                            </div>
+
+                            <div class="post-text-container"></div>
+                        </div>
+                        <p class="post-meta">
+                            <a href="#" target="_blank">1,985 points</a>
+                            .
+                            <a href="#" target="_blank">
+                                33 comments
+                            </a>
+                        </p>
+                        <div class="Gönderinin-Alt-Kısmı">
+                            <ul class="Gönderinin-Altındaki-Butonlar">
+                                <li>
+                                    <a href="#" class="Beğenme">
+                                        <img src="/img/up-arrow1.png" alt=""> <span>236</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="Beğenmeme">
+                                        <img src="/img/down-arrow.png" alt=""><span>236</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="Yorum">
+                                        <img src="/img/speech-bubble.png" alt=""><span>236</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="R-İkon">
+                                        <img src="/img/icons8-r-24.png" alt=""><span>SHARE</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                    <hr id="hr">
+                    <article>
+                        <header>
+                            <div class="post-section">
+                                <a target="_blank" href="#" id="funny">
+
+                                    <img src="/img/humor.png" alt="">
+                                </a>
+                                <p class="message">
+                                    <a target="_blank" href="#" class="section"> Funny </a>
+                                    .1d
+                                </p>
+                            </div>
+                            <a href="#" target="_blank">
+                                <a id="Başlık" href="/gönderi_sayfası" target="_blank">
+                                    <h3 id="Ana-sayfa-post-head">Lorem ipsum dolor sit amet.</h3>
+                                </a>
+                            </a>
+                        </header>
+                        <div class="post-container">
+                            <div class="post-container">
+                                <a href="/gönderi_sayfası">
+                                    <img src="img/biplane-4817195_640.jpg" alt="">
+                                </a>
+                            </div>
+
+                            <div class="post-text-container"></div>
+                        </div>
+                        <p class="post-meta">
+                            <a href="#" target="_blank">1,985 points</a>
+                            .
+                            <a href="#" target="_blank">
+                                33 comments
+                            </a>
+                        </p>
+                        <div class="Gönderinin-Alt-Kısmı">
+                            <ul class="Gönderinin-Altındaki-Butonlar">
+                                <li>
+                                    <a href="#" class="Beğenme">
+                                        <img src="img/up-arrow1.png" alt=""> <span>236</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="Beğenmeme">
+                                        <img src="img/down-arrow.png" alt=""><span>236</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="Yorum">
+                                        <img src="img/speech-bubble.png" alt=""><span>236</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="R-İkon">
+                                        <img src="img/icons8-r-24.png" alt=""><span>SHARE</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="modal fade" id="modalUpload" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header text-center" id="modal-header-upload">
+                    <h4 class="modal-title w-100 font-weight-bold">Paylaşım Yapma</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="scaper">
+                        <a href="#" id="upload-file-button" class="choose-file">
+                            <div class="upload-folder-img">
+                                <img src="img/folder.png" alt="">
+                            </div>
+                            <div class="upload-açıklama">
+                                <p>Paylaşacağınız gönderiyi seçiniz</p>
+                            </div>
+                            <input type="file" value="Dosya Seç">
+                        </a>
+                    </div>
+                    <div class="gönderi-yaparken-yorumu">
+                        <textarea id="gönderi-yorumu" placeholder="Gönderiniz hakkında yorum kısmı"
+                            style="resize: none;"></textarea>
+                    </div>
+                    <div class="kategori-seçme">
+                        <h4>Kategori seçimi</h4>
+                        <div id="bir-kategori">
+                            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                            <label for="vehicle1"> I have a bike</label>
+                        </div>
+                        <div id="bir-kategori">
+                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                            <label for="vehicle2"> I have a car</label>
+                        </div>
+                        <div id="bir-kategori">
+                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                            <label for="vehicle2"> I have a car</label>
+                        </div>
+                        <div id="bir-kategori">
+                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                            <label for="vehicle2"> I have a car</label>
+                        </div>
+                        <div id="bir-kategori">
+                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                            <label for="vehicle2"> I have a car</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button class="btn btn-success">Paylaş</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <body>
